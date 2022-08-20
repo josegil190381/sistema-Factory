@@ -1,0 +1,223 @@
+<aside class="main-sidebar">
+
+	 <section class="sidebar">
+
+		<ul class="sidebar-menu tree">
+
+		<?php
+
+		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Especial"){
+
+			echo '<li class="active">
+
+				<a href="inicio">
+
+					<i class="fa fa-home"></i>
+					<span>Inicio</span>
+
+				</a>
+
+			</li>';
+
+		}
+
+		if($_SESSION["perfil"] == "Administrador"){
+
+			echo '<li>
+
+				<a href="usuarios">
+
+					<i class="fa fa-user"></i>
+					<span>Usuarios</span>
+
+				</a>
+
+			</li>';
+
+		}
+
+		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
+
+			echo '<li>
+
+				<a href="clientes">
+
+					<i class="fa fa-users"></i>
+					<span>Clientes</span>
+
+				</a>
+
+			</li>';
+
+		}
+
+		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Especial"){
+
+			echo '<li>
+
+				<a href="proveedores">
+
+					<i class="fa fa-th"></i>
+					<span>Proveedores</span>
+
+				</a>
+
+			</li>
+
+			<li>
+
+				<a href="categorias">
+
+					<i class="fa fa-th"></i>
+					<span>Categorías</span>
+
+				</a>
+
+			</li>
+
+
+			<li>
+
+				<a href="productos">
+
+					<i class="fa fa-product-hunt"></i>
+					<span>Productos</span>
+
+				</a>
+
+			</li>';
+
+		}
+
+		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Especial"){
+
+
+			echo '<li>
+
+				<a href="compras">
+
+					<i class="fa fa-money"></i>
+					<span>Lista Compras</span>
+
+				</a>
+
+			</li>';
+
+		}	
+
+			echo '<li>
+
+					<a href="camion">
+
+						<i class="fa fa-truck"></i>
+						<span>Lista Camión</span>
+
+					</a>
+
+				</li>
+
+				<li>
+
+					<a href="gastos">
+						
+						<i class="fa fa-usd"></i> 
+						<span>Lista de Gastos</span>
+
+					</a>
+
+				</li>';
+
+				
+		if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
+
+			echo '<li class="treeview">
+
+					<a href="#">
+
+						<i class="fa fa-list-ul"></i>
+						
+						<span>Ventas</span>
+						
+						<span class="pull-right-container">
+						
+							<i class="fa fa-angle-left pull-right"></i>
+
+						</span>
+
+					</a>
+
+				<ul class="treeview-menu">
+					
+					<li>
+
+						<a href="ventas">
+							
+							<i class="fa fa-circle-o"></i>
+							<span>Todas las Ventas</span>
+
+						</a>
+
+					</li>
+
+					<li>
+
+						<a href="ventas-dia">
+							
+							<i class="fa fa-circle-o"></i>
+							<span>Ventas del Día</span>
+
+						</a>
+
+					</li>
+
+					<li>
+
+						<a href="crear-venta">
+							
+							<i class="fa fa-circle-o"></i>
+							<span>Crear venta</span>
+
+						</a>
+
+					</li>';
+
+
+					if($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Especial"){
+
+					echo '<li>
+
+							<a href="reportes">
+								
+								<i class="fa fa-circle-o"></i>
+								<span>Reportes Ventas</span>
+
+							</a>
+
+						</li>
+
+				</ul>
+
+				<!--Calendario-->				
+					<li>
+
+						<a href="calendario">
+							
+							<i class="fa fa-calendar"></i>
+							<span>Calendario</span>
+
+						</a>
+
+					</li>';
+
+				}
+
+		}
+		
+
+		?>
+
+		</ul>
+
+	 </section>
+
+</aside>
