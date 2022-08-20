@@ -207,12 +207,12 @@ class ControladorVentas{
 					$printer -> setJustification(Printer::JUSTIFY_CENTER);
 
                     /*Cargamos el logo*/
-                    $ruta_imagen_logo = dirname(__DIR__) . $traerConfiguracion["logo"];
-                    $logo = EscposImage::load($ruta_imagen_logo, false);
+                    // $ruta_imagen_logo = dirname(__DIR__) . $traerConfiguracion["logo"];
+                    // $logo = EscposImage::load($ruta_imagen_logo, false);
 
                     /*Imprimimos imagen y avanzamos el papel*/
-                    $printer->bitImage($logo);
-                    $printer->feed();
+                    // $printer->bitImage($logo);
+                    // $printer->feed();
 
 					$printer -> text(date("d-m-Y")."\n"); // Fecha de la Factura
 
